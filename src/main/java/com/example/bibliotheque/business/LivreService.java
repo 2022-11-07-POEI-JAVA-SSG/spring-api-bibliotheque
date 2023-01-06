@@ -45,4 +45,8 @@ public class LivreService {
     public Livre getLivre(Integer id){
         return livreRepository.findById(id).get();
     }
+
+    public List<Livre> search(String searchKeyword) {
+            return livreRepository.findAllByTitreContainingIgnoreCaseOrResumeContainingIgnoreCase(searchKeyword, searchKeyword);
+    }
 }

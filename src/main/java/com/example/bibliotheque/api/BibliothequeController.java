@@ -41,4 +41,9 @@ public class BibliothequeController {
         Livre livre = livreService.getLivre(livreId);
         return livreService.estDisponiblePourEmprunt(livre);
     }
+
+    @GetMapping("recherche")
+    public List<Livre> recherche(@RequestParam String searchKeyword){
+        return livreService.search(searchKeyword);
+    }
 }

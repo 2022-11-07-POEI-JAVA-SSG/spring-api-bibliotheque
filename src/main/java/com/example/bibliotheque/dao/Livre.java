@@ -18,6 +18,8 @@ public class Livre {
     private String titre;
     private int annee;
 
+    private String resume;
+
     private LocalDate dateEmprunt;
 
     private LocalDate dateRetour;
@@ -94,6 +96,14 @@ public class Livre {
 
     public void setDateRetour(LocalDate dateRetour) {
         this.dateRetour = dateRetour;
+    }
+
+    public String getResume() {
+        return resume;
+    }
+
+    public void setResume(String resume) {
+        this.resume = resume;
     }
 
     @Override
