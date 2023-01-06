@@ -35,4 +35,10 @@ public class BibliothequeController {
     public List<Livre> getLivres(){
         return livreService.getLivres();
     }
+
+    @GetMapping("estDispo")
+    public Boolean estDispo(@RequestParam Integer livreId){
+        Livre livre = livreService.getLivre(livreId);
+        return livreService.estDisponiblePourEmprunt(livre);
+    }
 }

@@ -3,6 +3,7 @@ package com.example.bibliotheque.dao;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +17,10 @@ public class Livre {
 
     private String titre;
     private int annee;
+
+    private LocalDate dateEmprunt;
+
+    private LocalDate dateRetour;
 
     @ManyToOne
     private Auteur auteur;
@@ -73,6 +78,22 @@ public class Livre {
 
     public void addCategorie(Categorie cat){
         categories.add(cat);
+    }
+
+    public LocalDate getDateEmprunt() {
+        return dateEmprunt;
+    }
+
+    public void setDateEmprunt(LocalDate dateEmprunt) {
+        this.dateEmprunt = dateEmprunt;
+    }
+
+    public LocalDate getDateRetour() {
+        return dateRetour;
+    }
+
+    public void setDateRetour(LocalDate dateRetour) {
+        this.dateRetour = dateRetour;
     }
 
     @Override
