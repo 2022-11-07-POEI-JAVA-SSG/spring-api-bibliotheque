@@ -50,4 +50,12 @@ public class LivreService {
         //return livreRepository.findAllByTitreContainingIgnoreCaseOrResumeContainingIgnoreCase(searchKeyword, searchKeyword);
         return livreRepository.searchLivres(searchKeyword);
     }
+
+    public List<Auteur> getAuteurs() {
+        return auteurRepository.findAll();
+    }
+
+    public List<Categorie> getCategories() {
+        return categorieRepository.findAll();
+    }
 }

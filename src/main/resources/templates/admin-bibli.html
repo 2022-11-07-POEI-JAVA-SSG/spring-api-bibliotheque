@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"> <head>
+    <meta charset="UTF-8"/>
+    <title>Bibliothèque</title>
+</head>
+<body>
+<h1>Admin Bibliothèque</h1>
+
+<h2>Catégorie:</h2>
+
+<form method="POST" action="categories">
+    <label for="nom">Catégorie:</label><input type="text" name="nom" id="nom">
+
+    <input type="submit" value="Ajouter">
+</form>
+
+<h2>Auteur:</h2>
+<form method="POST" action="auteurs">
+    <label for="prenom">Prénom:</label><input type="text" name="prenom" id="prenom">
+    <label for="nom">Nom:</label><input type="text" name="nom" id="nom">
+
+    <input type="submit" value="Ajouter">
+</form>
+
+
+<h2>Livre:</h2>
+<form method="POST" action="livres">
+    <label for="titre">Titre:</label><input type="text" name="titre" id="titre">
+    <label for="annee">Année:</label><input type="text" name="annee" id="annee">
+    <label for="resume">Résumé:</label><input type="text" name="resume" id="resume">
+
+    <select name="auteur">
+        <option th:each="auteur:${auteurs}" th:value="${auteur.id}" th:text="${auteur.prenom}+' '+${auteur.nom}"></option>
+    </select>
+
+    <span th:each="c:${categories}">
+        <label th:text="${c.nom}" th:for="${c.id}"></label>
+        <input type="checkbox" name="categories" th:value="${c.id}" th:id="${c.id}">
+    </span>
+
+
+    <input type="submit" value="Ajouter">
+</form>
+
+</body>
+</html>
+

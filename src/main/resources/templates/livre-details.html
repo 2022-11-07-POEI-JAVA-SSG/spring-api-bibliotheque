@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"> <head>
+    <meta charset="UTF-8"/>
+    <title>Bibliothèque</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+<a href="livres">Retour à la liste</a>
+
+<h1>Fiche Livre</h1>
+
+<p>Id:</p>
+<p th:text="${livre.id}"></p>
+
+<p>Titre:</p>
+<p th:text="${livre.titre}"></p>
+
+<p>Résumé:</p>
+<p th:text="${livre.resume}"></p>
+
+
+</body>
+</html>
+

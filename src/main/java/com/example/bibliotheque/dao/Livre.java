@@ -112,6 +112,11 @@ public class Livre {
                 "id=" + id +
                 ", titre='" + titre + '\'' +
                 ", annee=" + annee +
+                ", resume='" + resume + '\'' +
+                ", dateEmprunt=" + dateEmprunt +
+                ", dateRetour=" + dateRetour +
+                ", auteur=" + auteur +
+                ", categories=" + categories +
                 '}';
     }
 }
