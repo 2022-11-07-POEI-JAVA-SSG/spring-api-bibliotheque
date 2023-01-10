@@ -47,6 +47,7 @@ public class LivreService {
     }
 
     public List<Livre> search(String searchKeyword) {
-            return livreRepository.findAllByTitreContainingIgnoreCaseOrResumeContainingIgnoreCase(searchKeyword, searchKeyword);
+        //return livreRepository.findAllByTitreContainingIgnoreCaseOrResumeContainingIgnoreCase(searchKeyword, searchKeyword);
+        return livreRepository.searchLivres(searchKeyword);
     }
 }

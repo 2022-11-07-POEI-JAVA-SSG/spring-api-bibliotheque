@@ -3,7 +3,6 @@ package com.example.bibliotheque.api;
 import com.example.bibliotheque.dao.Auteur;
 import com.example.bibliotheque.dao.Categorie;
 import com.example.bibliotheque.dao.Livre;
-import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
